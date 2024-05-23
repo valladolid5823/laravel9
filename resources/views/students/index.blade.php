@@ -8,14 +8,17 @@
 </head>
 <body>
     <ul>
-        {{-- @php
-            print_r($students);
-        @endphp --}}
+        @php
+            var_dump($students);
+        @endphp
 
-        @foreach ($students as $student)
-        <li> {{ $student->first_name }} {{ $student->last_name }} {{$student->age}}</li>
+        {{-- @foreach ($students as $student) --}}
+        {{-- <li> {{ $student->first_name }} {{ $student->last_name }} {{$student->age}}</li> --}}
         {{-- <li> {{ $student['first_name'] }} {{ $student['last_name'] }}</li> --}}
-        @endforeach
+
+        {{-- Based on  the raw query --}}
+        {{-- <li>{{$student->gender}} {{ $student->gender_count }}</li> --}}
+        {{-- @endforeach --}}
     </ul>
 </body>
 </html>
