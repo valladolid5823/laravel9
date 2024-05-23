@@ -33,18 +33,28 @@ use Illuminate\Support\Facades\Route;
 //     return response()->download ($path, $name, $headers);
 // });
 
-
-Route::get('/', [StudentController::class, 'index']);
-
-
 // Alliasing users to login
 // Route::get('/users', [UserController::class, 'index'])->name('login');
 
-Route::get('/users', [UserController::class, 'index']);
+// Route::get('/users', [UserController::class, 'index']);
 
-Route::get('/user/{id}', [UserController::class, 'show'])->middleware('auth');
+// Route::get('/user/{id}', [UserController::class, 'show'])->middleware('auth');
 
-// Route::get('/students', [StudentController::class, 'index']);
+// // Route::get('/students', [StudentController::class, 'index']);
 
-Route::get('/students/{id}', [StudentController::class, 'show']);
+// Route::get('/students/{id}', [StudentController::class, 'show']);
+
+
+// Common routes naming
+// index - show all data
+// show - show single data
+// create - show a form to a new user
+// store - store data
+// edit - update data
+// update - update data
+// destroy - delete data
+
+Route::get('/', [StudentController::class, 'index']);
+Route::get('/login', [UserController::class, 'login']);
+
 

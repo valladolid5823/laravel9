@@ -10,7 +10,7 @@ class StudentController extends Controller
 {
     public function index() {
 
-        // $data['students'] = Students::all();
+        $data['students'] = Students::all();
         // $data['students'] = Students::where('id', 1)->get();
         // Search
         // $data['students'] = Students::where('first_name', 'like', '%ne%')->get();
@@ -26,7 +26,7 @@ class StudentController extends Controller
         //     ->select(DB::raw('count(*) as gender_count, gender'))->groupBy('gender')->get();
 
         // First or Fail | return error if data not dount in the database
-        $data['students'] = Students::where('id', 100)->firstOrFail()->get();
+        // $data['students'] = Students::where('id', 10)->firstOrFail()->get();
         return view('students.index', $data);
     }
 
