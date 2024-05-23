@@ -1,5 +1,6 @@
 @include('partials.header')
-<header class="max-w-lg mx-auto">
+<x-nav />
+<header class="max-w-lg mx-auto mt-12">
     <a href="#">
         <h1 class="text-4xl text-white font-bold text-center">Student List</h1>
     </a>

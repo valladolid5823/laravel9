@@ -21,6 +21,10 @@ class UserController extends Controller
 
     }
 
+    public function register() {
+        return view('user.register');
+    }
+
     // Passing data to user.blade.php
     public function show($id) {
 

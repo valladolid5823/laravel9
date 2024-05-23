@@ -56,5 +56,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [StudentController::class, 'index']);
 Route::get('/login', [UserController::class, 'login']);
+Route::get('/register', [UserController::class, 'register']);
 
 
